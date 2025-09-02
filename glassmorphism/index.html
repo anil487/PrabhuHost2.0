@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Glassmorphism Support Cards</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+  </head>
+  <body class="bg-gray-100">
+    <!-- Section -->
+    <section class="relative grid grid-cols-3 ">
+      <!-- Backgroundimage -->
+      <div class=" hidden md:block absolute inset-0 ">
+        <img
+          src="/assets/glassmorphismbg.png"
+          alt="Support Background"
+          class="max-w-full h-full object-cover"
+        />
+        <div class="absolute inset-0 bg-black/30"></div>
+        <!-- optional overlay -->
+      </div>
+      
+      <!-- Content Wrapper -->
+      <div class="relative grid-cols-1 md:col-span-2 max-w-7xl mx-auto px-6 py-20">
+        <div>
+         <!-- Heading -->
+               <h2 class="text-4xl font-bold text-gray-800 mb-12">
+          Expert Support Engineers That Act As<br />
+          Your Extended Team.
+        </h2>
+      </div>
+
+        <!-- Glass Cards -->
+        <div class="grid grid-cols-1 md:grid-cols-3 ">
+          <!-- Card 1 -->
+          <div>
+            <img src="/assets/glassSupport.png" />
+          </div>
+
+          <!-- Card 2 -->
+          <div>
+            <img src="/assets/csatScore.png" />
+          </div>
+
+          <!-- Card 3 -->
+          <div>
+            <img src="/assets/averageResptime.png" />
+          </div>
+        </div>
+      </div>
+    </section>
+  </body>
+</html>

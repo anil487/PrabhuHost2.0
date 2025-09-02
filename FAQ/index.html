@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>FAQ Accordion</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+  </head>
+  <body class="bg-gray-100">
+    <div class="container mx-auto px-4 py-8">
+      <div
+        class="grid grid-cols-1 lg:grid-cols-3 gap-8 max-w-7xl mx-auto items-start"
+      >
+        <!-- Image content -->
+        <div class="relative lg:col-span-1 lg:mt-16">
+          <div
+            class="relative h-[40vh] sm:h-[50vh] md:h-[55vh] lg:h-[65vh] w-full"
+          >
+            <img
+              src="/assets/FAQimage.png"
+              class="w-full h-full object-contain"
+              alt="FAQ Image"
+            />
+            <h3
+              class="absolute top-4 left-1/2 transform -translate-x-1/2 text-sm sm:text-base md:text-xl text-black font-bold text-center px-2"
+            >
+              Have any Inquiries?
+            </h3>
+
+            <!-- buttons -->
+            <div
+              class="absolute bottom-4 left-1/2 transform -translate-x-1/2 flex flex-col sm:flex-row gap-3 sm:gap-4 w-[55%] lg:w-[80%] max-w-xs sm:max-w-none px-2"
+            >
+              <button
+                class="flex-1 px-4 py-2 bg-gradient-to-l from-blue-400 to-blue-600 text-white rounded-lg hover:opacity-90 transition text-sm sm:text-base"
+              >
+                Create Ticket
+              </button>
+              <button
+                class="flex-1 px-4 py-2 bg-white text-black border border-gray-300 rounded-lg hover:bg-gray-100 transition text-sm sm:text-base"
+              >
+                Chat with Us
+              </button>
+            </div>
+          </div>
+
+          <!-- Divider -->
+          <div class="flex items-center mt-8 sm:mt-10 max-w-md mx-auto px-4">
+            <div class="flex-1 h-px bg-gray-300"></div>
+            <span
+              class="px-3 text-gray-500 text-xs sm:text-sm whitespace-nowrap"
+              >Connect With us on</span
+            >
+            <div class="flex-1 h-px bg-gray-300"></div>
+          </div>
+
+          <!-- Contact Icons -->
+          <div
+            class="flex flex-col sm:flex-row justify-center sm:justify-between gap-4 mt-4 px-4"
+          >
+            <div
+              class="flex items-center gap-2 justify-center sm:justify-start"
+            >
+              <img
+                src="/assets/vibericon.png"
+                class="h-8 w-8 sm:h-10 sm:w-10"
+              />
+              <span class="text-sm sm:text-base">9803926412</span>
+            </div>
+
+            <div class="flex items-center gap-2 justify-center sm:justify-end">
+              <img
+                src="/assets/whatsappicon.png"
+                class="h-8 w-8 sm:h-10 sm:w-10"
+              />
+              <span class="text-sm sm:text-base">9803926412 /13</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- FAQ content -->
+        <div
+          class="lg:col-span-2 max-w-2xl mx-auto lg:mx-0 space-y-4 w-full px-2 sm:px-0"
+        >
+          <div class="mb-6 text-center lg:text-left">
+            <h2
+              class="text-gray-600 font-medium text-xl sm:text-2xl md:text-3xl"
+            >
+              Frequently Asked Questions (FAQs)
+            </h2>
+          </div>
+
+          <!-- Accordion Item -->
+          <details open class="group border border-gray-200 rounded-lg">
+            <summary
+              class="flex justify-between items-center cursor-pointer p-4 font-medium text-gray-800 bg-white rounded-lg"
+            >
+              What is Virtual Private Server (VPS) Machine?
+              <span
+                class="flex items-center justify-center w-7 h-7 rounded-full bg-gray-300 transition-all duration-300 group-open:bg-gradient-to-r group-open:from-blue-400 group-open:to-blue-600 group-open:text-white flex-shrink-0 ml-2"
+              >
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                  class="w-4 h-4 transition-transform duration-300 -rotate-90 group-open:rotate-0"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M19 9l-7 7-7-7"
+                  />
+                </svg>
+              </span>
+            </summary>
+            <div
+              class="px-4 pb-4 pt-2 text-gray-500 space-y-3 text-sm sm:text-base"
+            >
+              <p>
+                VPS Hosting runs on technology called Virtualization, to create
+                an isolated Virtual Machine with dedicated resources and full
+                root access for you.
+              </p>
+            </div>
+          </details>
+          <!-- Accordion Item 2 -->
+          <details class="group border border-gray-200 rounded-lg">
+            <summary
+              class="flex justify-between items-center cursor-pointer p-4 font-medium text-gray-800 bg-white rounded-lg"
+            >
+              What are the advantages of VPS hosting?
+              <span
+                class="flex items-center justify-center w-7 h-7 rounded-full bg-gray-300 transition-all duration-300 group-open:bg-gradient-to-r group-open:from-blue-400 group-open:to-blue-600 group-open:text-white flex-shrink-0 ml-2"
+              >
+                <!-- Chevron Icon -->
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                  class="w-4 h-4 transition-transform duration-300 -rotate-90 group-open:rotate-0"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M19 9l-7 7-7-7"
+                  />
+                </svg>
+              </span>
+            </summary>
+            <div class="px-4 pb-4 pt-2 text-gray-500 space-y-3">
+              <p>
+                VPS hosting offers dedicated resources, better performance,
+                enhanced security, full root access for customization, easy
+                scalability, the ability to host multiple websites, and a
+                cost-effective balance between shared and dedicated hosting.
+              </p>
+            </div>
+          </details>
+
+          <!-- Accordion Item 3 -->
+          <details class="group border border-gray-200 rounded-lg">
+            <summary
+              class="flex justify-between items-center cursor-pointer p-4 font-medium text-gray-800 bg-white rounded-lg"
+            >
+              How Can i install custom software on my VPS Hosting?
+              <span
+                class="flex items-center justify-center w-7 h-7 rounded-full bg-gray-300 transition-all duration-300 group-open:bg-gradient-to-r group-open:from-blue-400 group-open:to-blue-600 group-open:text-white flex-shrink-0 ml-2"
+              >
+                <!-- Chevron Icon -->
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                  class="w-4 h-4 transition-transform duration-300 -rotate-90 group-open:rotate-0"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M19 9l-7 7-7-7"
+                  />
+                </svg>
+              </span>
+            </summary>
+            <div class="px-4 pb-4 pt-2 text-gray-500 space-y-3">
+              <ul class="list-disc pl-5 space-y-1">
+                <li>ssh root@your-server-ip</li>
+                <li>
+                  sudo apt update && sudo apt upgrade # For Ubuntu/Debian<br />
+                  sudo yum update # For CentOS/RHEL
+                </li>
+                <li>sudo apt install software-name</li>
+              </ul>
+            </div>
+          </details>
+
+          <!-- Accordion Item 4 -->
+          <details class="group border border-gray-200 rounded-lg">
+            <summary
+              class="flex justify-between items-center cursor-pointer p-4 font-medium text-gray-800 bg-white rounded-lg"
+            >
+              Is Prabhuhost reliable for VPS Hosting in Nepal?
+              <span
+                class="flex items-center justify-center w-7 h-7 rounded-full bg-gray-300 transition-all duration-300 group-open:bg-gradient-to-r group-open:from-blue-400 group-open:to-blue-600 group-open:text-white flex-shrink-0 ml-2"
+              >
+                <!-- Chevron Icon -->
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                  class="w-4 h-4 transition-transform duration-300 -rotate-90 group-open:rotate-0"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M19 9l-7 7-7-7"
+                  />
+                </svg>
+              </span>
+            </summary>
+            <div class="px-4 pb-4 pt-2 text-gray-500 space-y-3">
+              <p>
+                Yes, Prabhu Host appears to be a reliable and well-regarded VPS
+                provider in Nepal, especially for local businesses or developers
+                needing good performance, responsive support, and strong value.
+              </p>
+            </div>
+          </details>
+
+          <!-- Accordion Item 5 -->
+          <details class="group border border-gray-200 rounded-lg">
+            <summary
+              class="flex justify-between items-center cursor-pointer p-4 font-medium text-gray-800 bg-white rounded-lg"
+            >
+              What system does Prabhuhost VPS Hosting support?
+              <span
+                class="flex items-center justify-center w-7 h-7 rounded-full bg-gray-300 transition-all duration-300 group-open:bg-gradient-to-r group-open:from-blue-400 group-open:to-blue-600 group-open:text-white flex-shrink-0 ml-2"
+              >
+                <!-- Chevron Icon -->
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                  class="w-4 h-4 transition-transform duration-300 -rotate-90 group-open:rotate-0"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M19 9l-7 7-7-7"
+                  />
+                </svg>
+              </span>
+            </summary>
+            <div class="px-4 pb-4 pt-2 text-gray-500 space-y-3">
+              <p>
+                Supported Operating Systems According to Prabhu Host's product
+                details, when you order a VPS (e.g., VPS CL11, CL12, CL13), you
+                can choose from the following OS options:
+              </p>
+              <ul class="list-disc pl-5 space-y-1">
+                <li>Ubuntu</li>
+                <li>AlmaLinux</li>
+                <li>CentOS</li>
+                <li>Debian 12</li>
+              </ul>
+            </div>
+          </details>
+
+          <!-- Accordion Item 6 -->
+          <details class="group border border-gray-200 rounded-lg">
+            <summary
+              class="flex justify-between items-center cursor-pointer p-4 font-medium text-gray-800 bg-white rounded-lg"
+            >
+              Can I Install cPanel on my VPS Package?
+              <span
+                class="flex items-center justify-center w-7 h-7 rounded-full bg-gray-300 transition-all duration-300 group-open:bg-gradient-to-r group-open:from-blue-400 group-open:to-blue-600 group-open:text-white flex-shrink-0 ml-2"
+              >
+                <!-- Chevron Icon -->
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                  class="w-4 h-4 transition-transform duration-300 -rotate-90 group-open:rotate-0"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M19 9l-7 7-7-7"
+                  />
+                </svg>
+              </span>
+            </summary>
+            <div class="px-4 pb-4 pt-2 text-gray-500 space-y-3">
+              <p>
+                Yes, you can install cPanel/WHM on your PrabhuHost VPS package.
+              </p>
+            </div>
+          </details>
+        </div>
+      </div>
+    </div>
+    <script>
+      const accordions = document.querySelectorAll("details");
+
+      accordions.forEach((accordion) => {
+        accordion.addEventListener("toggle", () => {
+          if (accordion.open) {
+            accordions.forEach((other) => {
+              if (other !== accordion) {
+                other.removeAttribute("open");
+              }
+            });
+          }
+        });
+      });
+    </script>
+  </body>
+</html>
