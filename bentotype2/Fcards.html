@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Bento Type2</title>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+  </head>
+  <body class="bg-gray-100 p-6">
+    <div class="grid grid-cols-12 gap-6 max-w-7xl mx-auto">
+      <!-- Row 1: First cell spans 8/12 -->
+      <div
+        class="relative col-span-12 lg:col-span-8 rounded-xl flex flex-col bg-gradient-to-b from-white/70 to-blue-100/40 shadow-sm hover:shadow-md transition p-4"
+      >
+        <div class="flex flex-col items-center text-center">
+          <h2 class="text-lg font-semibold text-black">
+            Global Reach, Local Support
+          </h2>
+          <p class="text-gray-500 text-sm mt-3">
+            Host your website on a worldwide network with fast load times
+            everywhere, backed by Nepal-based support that understands your
+            needs.
+          </p>
+          <!-- Image hidden on mobile -->
+          <img
+            src="/assets/globalsupport1.png"
+            alt="card1"
+            class="mt-6 max-h-56 object-contain hidden md:block"
+          />
+          <img
+            src="/assets/globalsupport2.png"
+            alt="bottomicon"
+            class="shadow-sm p-2 rounded bg-white absolute bottom-2 right-2 md:bottom-6 md:right-6 hidden md:block"
+          />
+        </div>
+      </div>
+
+      <!-- Row 1 & 2: Second cell spans 4/12 and 2 rows -->
+      <div
+        class="col-span-12 lg:col-span-4 lg:row-span-2 rounded-xl flex flex-col bg-gradient-to-b from-white/100 via-[#0080FF]/15 via-50% to-[#0080FF]/20 shadow-sm hover:shadow-md transition p-4"
+      >
+        <div class="flex flex-col flex-grow items-center text-center">
+          <h2 class="text-lg font-semibold text-black">
+            Instant Setup & Deployment
+          </h2>
+          <p class="text-gray-500 text-sm mt-3">
+            Deploy your website in seconds with one-click installation for
+            WordPress, Joomla, Drupal, and more.
+          </p>
+          <img
+            src="/assets/instantSetuoandDeployment1.png"
+            alt="card2"
+            class="mt-6 object-contain w-full h-full flex-grow hidden md:block"
+          />
+        </div>
+      </div>
+
+      <!-- Row 2: First cell (4/12) -->
+      <div
+        class="col-span-12 md:col-span-4 rounded-xl flex flex-col bg-gradient-to-b from-white to-[#FF8F50]/10 shadow-sm hover:shadow-md transition p-4"
+      >
+        <div class="flex flex-col items-center text-center">
+          <h2 class="text-lg font-semibold text-black">
+            Superfast Hosting Performance
+          </h2>
+          <p class="text-gray-500 text-sm mt-3">
+            Powered by NVMe SSD storage and LiteSpeed servers, Prabhuhost
+            delivers lightning-fast load times for an exceptional browsing
+            experience.
+          </p>
+          <img
+            src="/assets/nvmessd.png"
+            alt="card3"
+            class="mt-4 max-h-32 object-contain hidden md:block"
+          />
+        </div>
+      </div>
+
+      <!-- Row 2: Second cell (4/12) -->
+      <div
+        class="col-span-12 md:col-span-4 rounded-xl flex flex-col bg-gradient-to-b from-white to-[#00C2E0]/15 shadow-sm hover:shadow-md transition p-4"
+      >
+        <div class="flex flex-col items-center text-center">
+          <h2 class="text-lg font-semibold text-black">
+            Advanced Security Suite
+          </h2>
+          <p class="text-gray-500 text-sm mt-3">
+            Free SSL, DDoS mitigation, daily backups, and malware scanning —
+            security handled for you.
+          </p>
+          <img
+            src="/assets/DDOSprotected.png"
+            alt="card4"
+            class="mt-4 max-h-36 object-contain hidden md:block"
+          />
+        </div>
+      </div>
+
+      <!-- Row 3: First cell (4/12) -->
+      <div
+        class="col-span-12 md:col-span-4 rounded-xl flex flex-col bg-gradient-to-b from-white to-[#0067CE]/15 shadow-sm hover:shadow-md transition p-4"
+      >
+        <div class="flex flex-col items-center text-center">
+          <h2 class="text-lg font-semibold text-black">
+            Auto Optimized Hosting
+          </h2>
+          <p class="text-gray-500 text-sm mt-3">
+            Our servers automatically tune themselves for speed, caching, and
+            resource allocation, so your site runs at peak performance 24/7.
+          </p>
+          <img
+            src="/assets/autoOptimizedHosting.png"
+            alt="card5"
+            class="mt-6 max-h-32 object-contain hidden md:block"
+          />
+        </div>
+      </div>
+
+      <!-- Row 3: Remaining two merged (8/12) -->
+      <div
+        class="col-span-12 md:col-span-8 rounded flex flex-col md:flex-row items-start bg-gradient-to-b from-white to-[#7BBAE5]/15 shadow-sm hover:shadow-md transition p-6 gap-6"
+      >
+        <!-- Text left -->
+        <div class="flex flex-col justify-start text-center md:text-left">
+          <h2 class="text-lg font-semibold text-black">Real-Time Monitoring</h2>
+          <p class="text-gray-500 text-sm mt-3">
+            Stay informed with live analytics, uptime tracking, and instant
+            alerts so you’re always in control of your website’s performance.
+            Stay informed with live analytics, uptime tracking, and instant
+            alerts so you’re always in control of your website’s performance.
+            Stay informed with live analytics, uptime tracking, and instant
+            alerts so you’re always in control of your website’s performance.
+            Stay informed with live analytics, uptime tracking, and instant
+            alerts so you’re always in control of your website’s performance.
+          </p>
+        </div>
+
+        <!-- Image right hidden on mobile -->
+        <div
+          class="flex-shrink-0 flex justify-center md:justify-end mt-4 md:mt-0"
+        >
+          <img
+            src="/assets/realtimeMonitoring.png"
+            alt="card6"
+            class="max-h-64 object-contain hidden md:block"
+          />
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
