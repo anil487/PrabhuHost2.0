@@ -6,22 +6,22 @@
     <title>Card Slider with Text and Gradient with Image Overlay</title>
     <script src="https://cdn.tailwindcss.com"></script>
   </head>
-  <body class="antialiased bg-gray-50 p-6">
+  <body class="antialiased bg-gray-50 p-10">
     <!-- Card 1 -->
     <div
-      class="bg-white rounded-xl shadow-md border border-gray-200 p-8 mb-6 flex flex-col md:flex-row items-center md:items-start"
+      class="relative bg-white rounded-xl shadow-md overflow-hidden mb-6 flex flex-col lg:flex-row"
     >
       <!-- Left content -->
-      <div class="md:w-2/3">
-        <h2 class="text-2xl font-bold mb-3">
+      <div class="lg:w-4/6 p-6 lg:pr-12 flex flex-col justify-center">
+        <h2 class="text-xl mb-4">
           Experience Ultra-fast Cloud Hosting in Nepal
         </h2>
-        <p class="text-gray-600 mb-4">
+        <p class="text-gray-600 mb-4 leading-relaxed">
           Experience the difference of hosting your website on ultra-fast cloud
           hosting in Nepal. Built for speed, reliability, and growth, our cloud
           hosting plans in Nepal are proven to drive results for clients.
         </p>
-        <ul class="list-disc pl-5 space-y-1 text-gray-600 mb-4">
+        <ul class="list-disc pl-5 space-y-2 mb-4 text-gray-700">
           <li>Blazing-fast load times powered by NVMe SSD storage</li>
           <li>99.9% uptime backed by reliable infrastructure</li>
           <li>24/7 expert support via multiple channels</li>
@@ -33,22 +33,45 @@
           starts just from <span class="font-bold">₨ 600</span>.
         </p>
       </div>
-      <!-- Right image -->
-      <div class="md:w-1/3 flex justify-center mt-6 md:mt-0">
+
+      <!-- Right Image -->
+      <div
+        class="relative lg:w-2/6 flex items-center justify-center p-4 bg-gradient-to-tr from-white via-[#00C2E0] via-[#80E1F0] via-[#BFF0F7] to-white rounded-r-xl min-h-[300px]"
+      >
+        <div
+          class="absolute inset-0 bg-[linear-gradient(to_top_right,_#FFFFFF_0%,_rgba(0,194,224,0.05)_100%)]"
+        ></div>
         <img
           src="/assets/servers 2.png"
           alt="Cloud Hosting Illustration"
-          class="max-w-[300px] h-auto"
+          class="relative z-10 w-full max-w-[300px] h-auto"
         />
+        <div
+          class="absolute z-20 px-7 py-2 bg-[linear-gradient(to_left,_rgba(0,103,206,0.4)_0%,_#FFFFFF_100%)] text-xs rounded shadow-md border-2"
+          style="top: 20%; right: 52%"
+        >
+          Cloud Server
+        </div>
+        <div
+          class="absolute z-20 px-7 py-2 bg-[linear-gradient(to_left,_rgba(0,103,206,0.4)_0%,_#FFFFFF_100%)] text-xs rounded shadow-md border-2"
+          style="bottom: 17%; left: 5%"
+        >
+          NVMe Storage
+        </div>
+        <div
+          class="absolute z-20 px-7 py-2 bg-[linear-gradient(to_left,_rgba(0,103,206,0.4)_0%,_#FFFFFF_100%)] text-black text-xs rounded shadow-md border-2"
+          style="bottom: 25%; left: 52%"
+        >
+          NVMe Storage
+        </div>
       </div>
     </div>
-
     <!-- Card 2 -->
     <div
-      class="bg-white rounded-xl shadow-md border border-gray-200 p-8 mb-6 flex flex-col md:flex-row items-center md:items-start"
+      class="bg-white rounded-xl shadow-md border border-gray-200 mb-6 flex flex-col md:flex-row overflow-hidden"
     >
       <!-- Left content -->
-      <div class="md:w-2/3">
+      <div class="md:w-4/6 p-8 flex flex-col justify-center">
         <h2 class="text-2xl font-bold mb-3">
           Effortless Website Management via cPanel
         </h2>
@@ -69,30 +92,40 @@
           every hosting plan.
         </p>
       </div>
+
       <!-- Right image -->
-      <div class="md:w-1/3 flex justify-center mt-6 md:mt-0">
-        <div class="relative">
+      <div class="md:w-2/6 relative flex items-center justify-center">
+        <!-- Full gradient background -->
+        <div
+          class="absolute inset-0 bg-[linear-gradient(-102deg,_#FFEADE_18%,_rgba(255,143,80,0.06)_100%)]"
+        ></div>
+
+        <!-- Images on top -->
+        <div
+          class="relative z-10 flex flex-col items-center justify-center h-full w-full"
+        >
           <img
             src="/assets/Vector.png"
             alt="cPanel Illustration"
-            class=" mb-8 h-auto"
+            class="h-12 object-contain mb-6"
           />
           <img
             src="/assets/Group 39904.png"
-            alt="cPanel Illustration"
-            class="max-w-[300px] h-auto items-center"
+            alt="One-click installation"
+            class="h-36 object-contain"
           />
         </div>
       </div>
     </div>
 
     <!-- Card 3 -->
+    <!-- Card 3 -->
     <div
-      class="bg-white rounded-xl shadow-md border border-gray-200 p-8 mb-6 flex flex-col md:flex-row items-center md:items-start"
+      class="bg-white rounded-xl shadow-md border border-gray-200 mb-6 flex flex-col md:flex-row overflow-hidden"
     >
       <!-- Left content -->
-      <div class="md:w-2/3">
-        <h2 class="text-2xl font-bold mb-3">Local Billing Made Easy</h2>
+      <div class="md:w-4/6 p-8 flex flex-col justify-center">
+        <h2 class="text-xl mb-3">Local Billing Made Easy</h2>
         <p class="text-gray-600 mb-4">
           What brings more convenience for Nepali businesses than local payment
           gateways for hosting platforms? We support eSewa and Khalti to make
@@ -108,50 +141,115 @@
           <li>Master Card</li>
         </ul>
       </div>
+
       <!-- Right image -->
-      <div class="md:w-1/3 flex justify-center mt-6 md:mt-0">
+      <div
+        class="md:w-2/6 relative flex items-center justify-center min-h-[250px]"
+      >
+        <!-- Gradient background -->
+        <div
+          class="absolute inset-0 bg-[linear-gradient(to_top_right,_rgba(255,255,255,0.5)_0%,_rgba(128,225,239,0.1)_50%,_rgba(0,194,224,0.2)_100%)]"
+        ></div>
+
+        <!-- Image -->
         <img
           src="/assets/Group 39902.png"
           alt="Billing Logos"
-          class="max-w-[300px] h-auto"
+          class="relative z-10 w-full max-w-[250px] h-auto object-contain"
         />
       </div>
     </div>
-    <!-- card...4 -->
+
+    <!-- Card 4 -->
     <div
-      class="bg-white rounded-xl shadow-md border border-gray-200 p-8 mb-6 flex flex-col md:flex-row items-center md:items-start"
+      class="bg-white rounded-xl shadow-md p-6 md:p-12 grid grid-cols-1 md:grid-cols-2 gap-6 mb-6"
     >
-      <!-- Left content -->
-      <div class="md:w-2/3">
-        <h2 class="text-2xl font-bold mb-3">Stable Pricing & No Hidden Cost</h2>
-        <p class="text-gray-600 mb-4">
-          Web hosting prices are stable, so customers don't experience a price
-          increase when they renew. You won't find any hidden costs here. All
-          pricing information is open and transparent from the start. Web
-          hosting prices are stable, so customers don't experience a price
-          increase when they renew. You won't find any hidden costs here. All
-          pricing information is open and transparent from the start. Web
-          hosting prices are stable, so customers don't experience a price
-          increase when they renew. You won't find any hidden costs here. All
-          pricing information is open and transparent from the start. Web
-          hosting prices are stable, so customers don't experience a price
-          increase when they renew. You won't find any hidden costs here. All
-          pricing information is open and transparent from the start.
+      <!-- Left: Text Content -->
+      <div class="flex flex-col justify-center">
+        <h2 class="text-xl text-gray-900 mb-4">Clear Pricing – No Surprises</h2>
+        <p class="text-gray-600 text-sm md:text-base mb-4 leading-relaxed">
+          At Prabhu Host, we believe that trust starts with transparency. That’s
+          why our pricing is straightforward, with no hidden charges, surprise
+          renewals, or unexpected add-ons. You get stable, local pricing
+          tailored for individuals, startups, and businesses seeking trustworthy
+          web hosting services in Nepal. Whether you’re launching your first
+          website or managing multiple projects, you’ll always know exactly what
+          you’re paying for, with flexible plans and honest value every step of
+          the way. Plan your budget with confidence with our web hosting plans!
         </p>
-        <ul class="list-disc pl-5 space-y-1 text-gray-600 mb-4">
-          <li>Esewa</li>
-          <li>Khalti</li>
-          <li>IMEPay</li>
-          <li>ConnectIPS</li>
+        <ul
+          class="list-disc list-inside text-gray-600 text-sm md:text-base space-y-1 mb-4"
+        >
+          <li>Efficient budget planning through transparent pricing</li>
+          <li>No hidden fees</li>
+          <li>No surprise renewals</li>
+          <li>Budget-friendly and honest</li>
+          <li>Clear billing breakdown</li>
         </ul>
       </div>
-      <!-- Right image -->
-      <div class="md:w-1/3 flex justify-center mt-6 md:mt-0">
-        <img
-          src="/assets/Rectangle 20.png"
-          alt="stablepricing"
-          class="max-w-[300px] h-auto"
-        />
+
+      <!-- Right: Decorative Rectangles + Button -->
+      <div class="relative flex flex-col items-center justify-center">
+        <!-- Decorative rectangles with new gradient -->
+        <div
+          class="absolute top-2 w-24 h-12 rounded shadow-sm border-2 rotate-6"
+          style="
+            background: linear-gradient(
+              to top right,
+              rgba(0, 194, 224, 0.5) 0%,
+              rgba(128, 225, 239, 0.5) 50%,
+              rgba(255, 255, 255, 0.5) 100%
+            );
+          "
+        ></div>
+        <div
+          class="absolute top-1/2 right-1/4 w-20 h-10 border-2 rounded shadow-sm -rotate-3"
+          style="
+            background: linear-gradient(
+              to top right,
+              rgba(0, 194, 224, 0.5) 0%,
+              rgba(128, 225, 239, 0.5) 50%,
+              rgba(255, 255, 255, 0.5) 100%
+            );
+          "
+        ></div>
+        <div
+          class="absolute bottom-1/3 left-1/3 w-28 h-14 rounded shadow-sm rotate-3"
+          style="
+            background: linear-gradient(
+              to top right,
+              rgba(0, 194, 224, 0.5) 0%,
+              rgba(128, 225, 239, 0.5) 50%,
+              rgba(255, 255, 255, 0.5) 100%
+            );
+          "
+        ></div>
+        <div
+          class="absolute bottom-6 right-1/4 w-20 h-10 rounded shadow-sm -rotate-6"
+          style="
+            background: linear-gradient(
+              to top right,
+              rgba(0, 194, 224, 0.5) 0%,
+              rgba(128, 225, 239, 0.5) 50%,
+              rgba(255, 255, 255, 0.5) 100%
+            );
+          "
+        ></div>
+
+        <!-- Button -->
+        <button
+          class="mt-auto text-black font-medium px-6 py-2 rounded shadow hover:shadow-lg transition"
+          style="
+            background: linear-gradient(
+              to top right,
+              rgba(0, 194, 224, 0.5) 0%,
+              rgba(128, 225, 239, 0.5) 50%,
+              rgba(255, 255, 255, 0.5) 100%
+            );
+          "
+        >
+          Go There →
+        </button>
       </div>
     </div>
   </body>
