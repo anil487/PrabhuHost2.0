@@ -299,7 +299,7 @@
     <script>
       const parentCards = document.querySelectorAll(".parent-card");
       const containers = document.querySelectorAll(".card-container");
-      const stackOffset = 20; // 20px gap
+      const stackOffset = 20; // vertical gap between stacked cards
 
       function clamp(v, a = 0, b = 1) {
         return Math.max(a, Math.min(b, v));
@@ -308,14 +308,15 @@
       function updateCards() {
         const scrollY = window.scrollY;
         const total = parentCards.length;
-        if (total < 4) return; // expects at least 4 cards for this logic
+        if (total < 4) return; // need at least 4 cards
 
         const thirdTop = containers[2].offsetTop;
         const fourthTop = containers[3].offsetTop;
 
-        // collapse occurs while 4th card moves from viewport bottom -> stackOffset
-        const collapseStart = fourthTop - window.innerHeight; // when 4th just enters viewport
-        const collapseEnd = fourthTop - stackOffset; // when 4th reaches stackOffset
+        // collapse starts when 4th card top aligns with 3rd card top
+        const collapseStart = thirdTop;
+        // collapse ends when 4th card reaches its own stack offset position
+        const collapseEnd = fourthTop - stackOffset;
         const collapseRange = Math.max(1, collapseEnd - collapseStart);
         const tCollapse = clamp((scrollY - collapseStart) / collapseRange);
 
@@ -324,51 +325,49 @@
           const cw = card.offsetWidth || 1;
           const ch = card.offsetHeight || 1;
 
-          // --- shrink progress (pixel reduction target) ---
           let widthReduction = 0;
           let heightReduction = 0;
 
-          // card2 shrinks up to 20px as card3 scrolls in
+          // card2 shrinks as card3 enters
           if (i === 1) {
-            const start = thirdTop - window.innerHeight;
+            const start = containers[2].offsetTop - window.innerHeight;
             const tShrink = clamp((scrollY - start) / ch);
             widthReduction = 80 * tShrink;
             heightReduction = 80 * tShrink;
           }
 
-          // card3 shrinks up to 40px as card4 scrolls in
+          // card3 shrinks as card4 enters
           if (i === 2) {
-            const start = fourthTop - window.innerHeight;
+            const start = containers[3].offsetTop - window.innerHeight;
             const tShrink = clamp((scrollY - start) / ch);
             widthReduction = 40 * tShrink;
             heightReduction = 40 * tShrink;
           }
 
-          // compute base stacked Y (before collapse)
-          const startY = i * stackOffset; // 0,20,40,60...
+          // stacked Y before collapse
+          const startY = i * stackOffset;
 
-          // during collapse, move each card toward top (0). tCollapse=0 -> startY, tCollapse=1 -> 0
+          // smooth collapse using tCollapse
           const translateY = startY * (1 - tCollapse);
 
           // compute scale from pixel reductions (centered)
           const scaleX = Math.max(0.01, 1 - widthReduction / cw);
           const scaleY = Math.max(0.01, 1 - heightReduction / ch);
 
-          // keep shrink centered horizontally and aligned at top (so overlap looks neat)
           card.style.transformOrigin = "center top";
           card.style.transform = `translateY(${translateY}px) scale(${scaleX}, ${scaleY})`;
 
-          // ensure card4 is on top
+          // z-index
           card.style.zIndex = i === total - 1 ? 200 : 100 - i;
 
-          // grey shadows
+          // shadows
           card.style.boxShadow =
             i === total - 1
               ? "0 10px 20px rgba(128,128,128,0.3), 0 4px 6px rgba(128,128,128,0.2)"
               : "0 8px 16px rgba(128,128,128,0.2), 0 4px 8px rgba(128,128,128,0.15)";
 
-          // smoothness
-          card.style.transition = "transform 0.18s cubic-bezier(.22,.9,.28,1)";
+          // smooth transition
+          card.style.transition = "transform 0.2s cubic-bezier(.22,.9,.28,1)";
           card.style.willChange = "transform";
         }
       }
