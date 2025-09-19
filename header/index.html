@@ -95,8 +95,11 @@
           </li>
         </ul>
       </div>
-      <div class="bg-white w-full">
-        <div class="mx-auto flex items-center justify-between px-4 py-3">
+      <div class="bg-white w-full relative">
+        <div
+          id="topBar"
+          class="max-w-screen-xl mx-auto px-4 py-2 flex justify-between items-center text-sm"
+        >
           <!-- Logo -->
           <div class="flex items-center space-x-2">
             <img
@@ -109,8 +112,9 @@
           <!-- Navigation menu -->
           <nav>
             <ul class="flex items-center space-x-6 font-normal">
-              <li class="group cursor-pointer">
-                <div class="flex items-center gap-1 text-black">
+              <!-- Hostings with dropdown -->
+              <li class="relative cursor-pointer">
+                <div id="hostingBtn" class="flex items-center gap-1 text-black">
                   Hostings
                   <img
                     src="/assets/page1DownChevron.svg"
@@ -118,9 +122,251 @@
                     class="w-2 h-2"
                   />
                 </div>
+
+                <!-- Dropdown card of hosting -->
+                <div
+                  id="hostingDropdown"
+                  class="absolute top-full transform -translate-x-1/2 mt-2 bg-white shadow-xl w-[768px] rounded-2xl border hidden z-50 transition-all duration-300"
+                >
+                  <div class="p-6 grid grid-cols-4 gap-x-6 gap-y-8">
+                    <div>
+                      <span
+                        class="text-sm text-[#F36B23] border-2 border-[#F36B23] font-normal rounded-lg p-2"
+                        >Hosting Options</span
+                      >
+                      <div class="mt-4 space-y-4">
+                        <a
+                          href="#"
+                          class="flex items-center gap-4 p-2 rounded-xl transition-colors duration-200 hover:bg-gray-100"
+                        >
+                          <img
+                            src="/assets/dropdownCloud.svg"
+                            alt="Cloud Hosting"
+                            class="w-8 h-8"
+                          />
+                          <div>
+                            <h4 class="text-base font-semibold font-normal">
+                              Unlimited Cloud Hosting
+                            </h4>
+                            <p class="text-sm text-gray-500">
+                              Scalable and reliable cloud hosting for all needs
+                            </p>
+                          </div>
+                        </a>
+                        <a
+                          href="#"
+                          class="flex items-center gap-4 p-2 rounded-xl transition-colors duration-200 hover:bg-gray-100"
+                        >
+                          <img
+                            src="/assets/dropdownWordpress1.svg"
+                            alt="WordPress Hosting"
+                            class="w-8 h-8"
+                          />
+                          <div>
+                            <h4 class="text-base font-medium">
+                              WordPress Hosting
+                            </h4>
+                            <p class="text-sm text-gray-500">
+                              Fast and scalable hosting for Wordpress websites
+                            </p>
+                          </div>
+                        </a>
+                        <a
+                          href="#"
+                          class="flex items-center gap-4 p-2 rounded-xl transition-colors duration-200 hover:bg-gray-100"
+                        >
+                          <img
+                            src="/assets/dropdownCheapest1.svg"
+                            alt="Web Hosting"
+                            class="w-8 h-8"
+                          />
+                          <div>
+                            <h4 class="text-base font-medium">
+                              Cheapest Web Hosting
+                            </h4>
+                            <p class="text-sm text-gray-500">
+                              Affordable and Reliable for small websites
+                            </p>
+                          </div>
+                        </a>
+                      </div>
+                    </div>
+
+                    <div>
+                      <span
+                        class="text-sm font-normal text-[#00C2E0] p-2 rounded-lg border-2 border-[#00C2E0]"
+                        >Code Based</span
+                      >
+                      <div class="mt-4 space-y-4">
+                        <a
+                          href="#"
+                          class="flex items-center gap-4 p-2 rounded-xl transition-colors duration-200 hover:bg-gray-100"
+                        >
+                          <img
+                            src="/assets/dropdownPython.svg"
+                            alt="Python Hosting"
+                            class="w-8 h-8"
+                          />
+                          <div>
+                            <h4 class="text-base font-medium">
+                              Python Hosting
+                            </h4>
+                            <p class="text-sm text-gray-500">
+                              Scalable and reliable cloud hosting for all needs
+                            </p>
+                          </div>
+                        </a>
+                        <a
+                          href="#"
+                          class="flex items-center gap-4 p-2 rounded-xl transition-colors duration-200 hover:bg-gray-100"
+                        >
+                          <img
+                            src="/assets/dropdownNodejs.svg"
+                            alt="Node.JS Hosting"
+                            class="w-8 h-8"
+                          />
+                          <div>
+                            <h4 class="text-base font-medium">
+                              Node.JS Hosting
+                            </h4>
+                            <p class="text-sm text-gray-500">
+                              Fast and scalable hosting for Wordpress websites
+                            </p>
+                          </div>
+                        </a>
+                        <a
+                          href="#"
+                          class="flex items-center gap-4 p-2 rounded-xl transition-colors duration-200 hover:bg-gray-100"
+                        >
+                          <img
+                            src="/assets/dropdownTomCat.svg"
+                            alt="Tomcat Hosting"
+                            class="w-8 h-8"
+                          />
+                          <div>
+                            <h4 class="text-base font-medium">
+                              Tomcat Hosting
+                            </h4>
+                            <p class="text-sm text-gray-500">
+                              Affordable and Reliable for small websites
+                            </p>
+                          </div>
+                        </a>
+                      </div>
+                    </div>
+
+                    <div>
+                      <span
+                        class="text-sm text-blue-500 border-2 border-[#00C2E0] p-2 rounded-lg"
+                        >Reseller Hosting</span
+                      >
+                      <div class="mt-4 space-y-4">
+                        <a
+                          href="#"
+                          class="flex items-center gap-4 p-2 rounded-xl transition-colors duration-200 hover:bg-gray-100"
+                        >
+                          <img
+                            src="/assets/dropdownReseller.svg"
+                            alt="Reseller Hosting"
+                            class="w-8 h-8"
+                          />
+                          <div>
+                            <h4 class="text-base font-medium">
+                              Reseller Hosting
+                            </h4>
+                            <p class="text-sm text-gray-500">
+                              Scalable and reliable cloud hosting for all needs
+                            </p>
+                          </div>
+                        </a>
+                        <a
+                          href="#"
+                          class="flex items-center gap-4 p-2 rounded-xl transition-colors duration-200 hover:bg-gray-100"
+                        >
+                          <img
+                            src="/assets/dropdownecommerce.svg"
+                            alt="Ecommerce Hosting"
+                            class="w-8 h-8"
+                          />
+                          <div>
+                            <h4 class="text-base font-medium">
+                              Ecommerce Hosting
+                            </h4>
+                            <p class="text-sm text-gray-500">
+                              Professional Hosting for small and large business
+                            </p>
+                          </div>
+                        </a>
+                        <a
+                          href="#"
+                          class="flex items-center gap-4 p-2 rounded-xl transition-colors duration-200 hover:bg-gray-100"
+                        >
+                          <img
+                            src="/assets/dropdownBusiness.svg"
+                            alt="Business Hosting"
+                            class="w-8 h-8"
+                          />
+                          <div>
+                            <h4 class="text-base font-medium">
+                              Business Hosting
+                            </h4>
+                            <p class="text-sm text-gray-500">
+                              Fast and scalable hosting for Wordpress websites
+                            </p>
+                          </div>
+                        </a>
+                      </div>
+                    </div>
+
+                    <div>
+                      <span
+                        class="text-sm text-blue-600 border-2 border-[#00C2E0] p-2 rounded-lg"
+                        >SSL Certificate</span
+                      >
+                      <div class="mt-4 space-y-4">
+                        <a
+                          href="#"
+                          class="flex items-center gap-4 p-2 rounded-xl transition-colors duration-200 hover:bg-gray-100"
+                        >
+                          <img
+                            src="/assets/dropdownSSL.svg"
+                            alt="SSL Certificate"
+                            class="w-8 h-8"
+                          />
+                          <div>
+                            <h4 class="text-base font-medium">
+                              SSL Certificate
+                            </h4>
+                            <p class="text-sm text-gray-500">
+                              Scalable and reliable cloud hosting for all needs
+                            </p>
+                          </div>
+                        </a>
+                        <a
+                          href="#"
+                          class="flex items-center gap-4 p-2 rounded-xl transition-colors duration-200 hover:bg-gray-100"
+                        >
+                          <img
+                            src="/assets/dropdownSecurity.svg"
+                            alt="Security"
+                            class="w-8 h-8"
+                          />
+                          <div>
+                            <h4 class="text-base font-medium">Security</h4>
+                            <p class="text-sm text-gray-500">
+                              Scalable and reliable cloud hosting for all needs
+                            </p>
+                          </div>
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
               </li>
-              <li class="group cursor-pointer">
-                <div class="flex items-center gap-1 text-black">
+
+              <!-- Domain & SSL with dropdown -->
+              <li class="relative cursor-pointer">
+                <div id="domainBtn" class="flex items-center gap-1 text-black">
                   Domain & SSL
                   <img
                     src="/assets/page1DownChevron.svg"
@@ -128,9 +374,196 @@
                     class="w-2 h-2"
                   />
                 </div>
+
+                <div
+                  id="domainDropdown"
+                  class="absolute top-full left-0 mt-2 w-[768px] bg-white shadow-lg rounded-lg border hidden z-50"
+                >
+                  <div class="p-6 grid grid-cols-4 gap-x-6 gap-y-8">
+                    <div>
+                      <span
+                        class="text-sm text-[#F36B23] border-2 border-[#F36B23] font-normal rounded-lg p-2"
+                        >Domain Options</span
+                      >
+                      <div class="mt-4 space-y-4">
+                        <a
+                          href="#"
+                          class="flex items-center gap-4 p-2 rounded-xl transition-colors duration-200 hover:bg-gray-100"
+                        >
+                          <img
+                            src="/assets/dropdownDomain.svg"
+                            alt="DomainRegistration"
+                            class="w-8 h-8"
+                          />
+                          <div>
+                            <h4 class="text-base font-semibold font-normal">
+                              Domain Registration
+                            </h4>
+                            <p class="text-sm text-gray-500">
+                              Scalable and reliable cloud hosting for all needs
+                            </p>
+                          </div>
+                        </a>
+                        <a
+                          href="#"
+                          class="flex items-center gap-4 p-2 rounded-xl transition-colors duration-200 hover:bg-gray-100"
+                        >
+                          <img
+                            src="/assets/dropdowndomainTrasnfer.svg"
+                            alt="domaintransfer"
+                            class="w-8 h-8"
+                          />
+                          <div>
+                            <h4 class="text-base font-medium">
+                              Domain Transfer
+                            </h4>
+                            <p class="text-sm text-gray-500">
+                              Fast and scalable hosting for Wordpress websites
+                            </p>
+                          </div>
+                        </a>
+                      </div>
+                    </div>
+
+                    <div>
+                      <span
+                        class="text-sm font-normal text-[#00C2E0] p-2 rounded-lg border-2 border-[#00C2E0]"
+                        >Migration</span
+                      >
+                      <div class="mt-4 space-y-4">
+                        <a
+                          href="#"
+                          class="flex items-center gap-4 p-2 rounded-xl transition-colors duration-200 hover:bg-gray-100"
+                        >
+                          <img
+                            src="/assets/dropdownMigration.svg"
+                            alt="migration"
+                            class="w-8 h-8"
+                          />
+                          <div>
+                            <h4 class="text-base font-medium">
+                              Website Migration
+                            </h4>
+                            <p class="text-sm text-gray-500">
+                              Scalable and reliable cloud hosting for all needs
+                            </p>
+                          </div>
+                        </a>
+                        <a
+                          href="#"
+                          class="flex items-center gap-4 p-2 rounded-xl transition-colors duration-200 hover:bg-gray-100"
+                        >
+                          <img
+                            src="/assets/dropdownNPDNameRegistration.svg"
+                            alt="Node.JS Hosting"
+                            class="w-8 h-8"
+                          />
+                          <div>
+                            <h4 class="text-base font-medium">
+                              .np Domain Registration
+                            </h4>
+                            <p class="text-sm text-gray-500">
+                              Fast and scalable hosting for Wordpress websites
+                            </p>
+                          </div>
+                        </a>
+                      </div>
+                    </div>
+
+                    <div>
+                      <span
+                        class="text-sm text-blue-500 border-2 border-[#00C2E0] p-2 rounded-lg"
+                        >SSL Certificate</span
+                      >
+                      <div class="mt-4 space-y-4">
+                        <a
+                          href="#"
+                          class="flex items-center gap-4 p-2 rounded-xl transition-colors duration-200 hover:bg-gray-100"
+                        >
+                          <img
+                            src="/assets/dropdownSSLCertificate.svg"
+                            alt="Reseller Hosting"
+                            class="w-8 h-8"
+                          />
+                          <div>
+                            <h4 class="text-base font-medium">
+                              SSL Certificate
+                            </h4>
+                            <p class="text-sm text-gray-500">
+                              Scalable and reliable cloud hosting for all needs
+                            </p>
+                          </div>
+                        </a>
+                        <a
+                          href="#"
+                          class="flex items-center gap-4 p-2 rounded-xl transition-colors duration-200 hover:bg-gray-100"
+                        >
+                          <img
+                            src="/assets/dropdownecommerce.svg"
+                            alt="Ecommerce Hosting"
+                            class="w-8 h-8"
+                          />
+                          <div>
+                            <h4 class="text-base font-medium">
+                              Ecommerce Hosting
+                            </h4>
+                            <p class="text-sm text-gray-500">
+                              Professional Hosting for small and large business
+                            </p>
+                          </div>
+                        </a>
+                      </div>
+                    </div>
+
+                    <div>
+                      <span
+                        class="text-sm text-blue-600 border-2 border-[#00C2E0] p-2 rounded-lg"
+                        >SSL Certificate</span
+                      >
+                      <div class="mt-4 space-y-4">
+                        <a
+                          href="#"
+                          class="flex items-center gap-4 p-2 rounded-xl transition-colors duration-200 hover:bg-gray-100"
+                        >
+                          <img
+                            src="/assets/dropdownSSL.svg"
+                            alt="SSL Certificate"
+                            class="w-8 h-8"
+                          />
+                          <div>
+                            <h4 class="text-base font-medium">
+                              SSL Certificate
+                            </h4>
+                            <p class="text-sm text-gray-500">
+                              Scalable and reliable cloud hosting for all needs
+                            </p>
+                          </div>
+                        </a>
+                        <a
+                          href="#"
+                          class="flex items-center gap-4 p-2 rounded-xl transition-colors duration-200 hover:bg-gray-100"
+                        >
+                          <img
+                            src="/assets/dropdownSecurity.svg"
+                            alt="Security"
+                            class="w-8 h-8"
+                          />
+                          <div>
+                            <h4 class="text-base font-medium">Security</h4>
+                            <p class="text-sm text-gray-500">
+                              Scalable and reliable cloud hosting for all needs
+                            </p>
+                          </div>
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
               </li>
-              <li>
-                <div class="flex items-center gap-1 text-black">
+
+              <!-- Email & Cloud (optional dropdown) -->
+              <li class="relative cursor-pointer">
+                <div id="emailBtn" class="flex items-center gap-1 text-black">
                   Email & Cloud
                   <img
                     src="/assets/page1DownChevron.svg"
@@ -138,9 +571,99 @@
                     class="w-2 h-2"
                   />
                 </div>
+
+                <!-- Dropdown -->
+                <div
+                  id="emailDropdown"
+                  class="absolute top-full left-0 mt-2 w-[1024px] bg-white shadow-lg rounded-lg border hidden z-50"
+                >
+                  <div class="p-4 grid grid-cols-4 gap-6">
+                    <!-- Column 1 -->
+                    <div>
+                      <span
+                        class="text-sm text-[#F36B23] border-2 border-[#F36B23] rounded-lg p-2"
+                      >
+                        Email Solutions
+                      </span>
+                      <div class="mt-4 space-y-4">
+                        <a
+                          href="#"
+                          class="flex items-center gap-4 p-2 rounded-xl transition-colors duration-200 hover:bg-gray-100"
+                        >
+                          <img
+                            src="/assets/dropdownEmailhosting.svg"
+                            alt="Email Hosting"
+                            class="w-8 h-8"
+                          />
+                          <div>
+                            <h4 class="text-base font-semibold">
+                              Email Hosting
+                            </h4>
+                            <p class="text-sm text-gray-500">
+                              Scalable and reliable email hosting
+                            </p>
+                          </div>
+                        </a>
+                      </div>
+                    </div>
+
+                    <!-- Column 2 -->
+                    <div>
+                      <div class="mt-4 space-y-4">
+                        <a
+                          href="#"
+                          class="flex items-center gap-4 p-2 rounded-xl transition-colors duration-200 hover:bg-gray-100"
+                        >
+                          <img
+                            src="/assets/dropdownOffice365.svg"
+                            alt="Office 365"
+                            class="w-8 h-8"
+                          />
+                          <div>
+                            <h4 class="text-base font-medium">
+                              Microsoft Office 365
+                            </h4>
+                            <p class="text-sm text-gray-500">
+                              Powerful productivity tools with cloud storage
+                            </p>
+                          </div>
+                        </a>
+                      </div>
+                    </div>
+
+                    <!-- Column 3 -->
+                    <div>
+                      <div class="mt-4 space-y-4">
+                        <a
+                          href="#"
+                          class="flex items-center gap-4 p-2 rounded-xl transition-colors duration-200 hover:bg-gray-100"
+                        >
+                          <img
+                            src="/assets/dropdownGoogleworkspace.svg"
+                            alt="Google Workspace"
+                            class="w-8 h-8"
+                          />
+                          <div>
+                            <h4 class="text-base font-medium">
+                              Google Workspace
+                            </h4>
+                            <p class="text-sm text-gray-500">
+                              Smart tools for teamwork
+                            </p>
+                          </div>
+                        </a>
+                      </div>
+                    </div>
+
+                    <!-- Column 4 (Empty) -->
+                    <div></div>
+                  </div>
+                </div>
               </li>
-              <li>
-                <div class="flex items-center gap-1 text-black">
+
+              <!-- Dedicated Server & VPS -->
+              <li class="relative cursor-pointer">
+                <div id="serverBtn" class="flex items-center gap-1 text-black">
                   Dedicated Server & VPS
                   <img
                     src="/assets/page1DownChevron.svg"
@@ -148,15 +671,48 @@
                     class="w-2 h-2"
                   />
                 </div>
+
+                <div
+                  id="serverDropdown"
+                  class="absolute top-full left-0 mt-2 w-64 bg-white shadow-lg rounded-lg border hidden z-50"
+                >
+                  <div class="p-4 grid grid-cols-1 gap-2">
+                    <a
+                      href="#"
+                      class="block px-3 py-2 rounded hover:bg-blue-100"
+                      >VPS Server</a
+                    >
+                    <a
+                      href="#"
+                      class="block px-3 py-2 rounded hover:bg-blue-100"
+                      >Dedicated Server</a
+                    >
+                  </div>
+                </div>
               </li>
-              <li>
-                <div class="flex items-center gap-1 text-black">
+
+              <!-- Others -->
+              <li class="relative cursor-pointer">
+                <div id="othersBtn" class="flex items-center gap-1 text-black">
                   Others
                   <img
                     src="/assets/page1DownChevron.svg"
                     alt="chevronDown"
                     class="w-2 h-2"
                   />
+                </div>
+
+                <div
+                  id="othersDropdown"
+                  class="absolute top-full left-0 mt-2 w-64 bg-white shadow-lg rounded-lg border hidden z-50"
+                >
+                  <div class="p-4 grid grid-cols-1 gap-2">
+                    <a
+                      href="#"
+                      class="block px-3 py-2 rounded hover:bg-blue-100"
+                      >Other Services</a
+                    >
+                  </div>
                 </div>
               </li>
             </ul>
@@ -182,7 +738,7 @@
             <a href="/login" class="flex items-center gap-1 text-blue-600">
               <img src="/assets/accountIcon.svg" alt="login" class="w-6 h-6" />
               <img
-                src="/assets/page1DownChevron.svg"
+                src="/assets/accountIconChevron.svg"
                 alt="chevronDown"
                 class="w-2 h-2"
               />
@@ -191,5 +747,69 @@
         </div>
       </div>
     </div>
+
+    <script>
+      // Get all dropdown elements
+      const dropdowns = {
+        hosting: {
+          btn: document.getElementById("hostingBtn"),
+          dropdown: document.getElementById("hostingDropdown"),
+        },
+        domain: {
+          btn: document.getElementById("domainBtn"),
+          dropdown: document.getElementById("domainDropdown"),
+        },
+        email: {
+          btn: document.getElementById("emailBtn"),
+          dropdown: document.getElementById("emailDropdown"),
+        },
+        server: {
+          btn: document.getElementById("serverBtn"),
+          dropdown: document.getElementById("serverDropdown"),
+        },
+        others: {
+          btn: document.getElementById("othersBtn"),
+          dropdown: document.getElementById("othersDropdown"),
+        },
+      };
+
+      // Function to close all dropdowns
+      function closeAllDropdowns() {
+        Object.values(dropdowns).forEach(({ dropdown }) => {
+          dropdown.classList.add("hidden");
+        });
+      }
+
+      // Add click event listeners to all dropdown buttons
+      Object.entries(dropdowns).forEach(([key, { btn, dropdown }]) => {
+        btn.addEventListener("click", (e) => {
+          e.stopPropagation();
+
+          // Close all other dropdowns first
+          Object.entries(dropdowns).forEach(
+            ([otherKey, { dropdown: otherDropdown }]) => {
+              if (otherKey !== key) {
+                otherDropdown.classList.add("hidden");
+              }
+            }
+          );
+
+          // Toggle current dropdown
+          dropdown.classList.toggle("hidden");
+        });
+      });
+
+      // Close all dropdowns when clicking outside
+      document.addEventListener("click", () => {
+        closeAllDropdowns();
+      });
+
+      // Prevent dropdown from closing when clicking inside it
+      Object.values(dropdowns).forEach(({ dropdown }) => {
+        dropdown.addEventListener("click", (e) => {
+          e.stopPropagation();
+        });
+      });
+    </script>
   </body>
 </html>
